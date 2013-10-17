@@ -55,7 +55,8 @@ module.exports = function(app, passport, auth) {
         ]
     }), users.signin);
 
-    app.get('/auth/google/callback', passport.authenticate('google', {
+    app.get('/auth/google/callback',
+        passport.authenticate('google', {
         failureRedirect: '/signin'
     }), users.authCallback);
 

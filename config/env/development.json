@@ -1,7 +1,7 @@
 {
-    "db": "mongodb://localhost/mean-dev",
+    "db": "mongodb://localhost/lession-dev",
     "app": {
-        "name": "MEAN - A Modern Stack - Development"
+        "name": "Lession - Live Sessions"
     },
     "facebook": {
         "clientID": "APP_ID",
@@ -19,8 +19,8 @@
         "callbackURL": "http://localhost:3000/auth/github/callback"
     },
     "google": {
-        "clientID": "APP_ID",
-        "clientSecret": "APP_SECRET",
+        "clientID": "284526102479.apps.googleusercontent.com",
+        "clientSecret": "qDVkP4IaEgMBkS6zHKcRPgWM",
         "callbackURL": "http://localhost:3000/auth/google/callback"
     }
 }
