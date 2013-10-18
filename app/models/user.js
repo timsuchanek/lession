@@ -18,10 +18,37 @@ var UserSchema = new Schema({
     username: {type: String, unique: true},
     provider: String,
     hashed_password: String,
-    facebook: {},
-    twitter: {},
-    github: {},
-    google: {}
+    // facebook: {},
+    // twitter: {},
+    // github: {},
+    calendar: [{
+        start: Date,
+        end: Date,
+        freeTime: Boolean,
+        partner: String, // partner's name, optional
+        topics: [String],
+        isTutor: Boolean // is he a tutor in this session
+    }],
+    google: {}, // google data
+    teach: [{
+        category: String,
+        verified: Boolean
+    }], // categories he teaches
+    learn: [String],
+    documents: [String], // certificates, that he has specific skill
+    hourlyRate: Number, // in euro
+    profilePicture: String,
+    ratings: [{
+        score: {
+            type: Number,
+            min: 0,
+            max: 5
+        },
+        from: {
+            type: String, // username of user who rated
+            unique: true
+        }
+    }]
 });
 
 /**
@@ -32,6 +59,16 @@ UserSchema.virtual('password').set(function(password) {
     this.hashed_password = this.encryptPassword(password);
 }).get(function() {
     return this._password;
+});
+
+UserSchema.virtual('rating').get(function() {
+    var sum = 0,
+        i = 0;
+    this.ratings.forEach(function(rating) {
+        i++;
+        sum += rating.score;
+    });
+    return sum / i;
 });
 
 /**

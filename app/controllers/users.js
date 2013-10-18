@@ -101,3 +101,14 @@ exports.user = function(req, res, next, id) {
             next();
         });
 };
+
+/**
+ * Get all users
+ */
+exports.users = function(req, res, next) {
+    User.find().select('-_id -hashed_password')
+    .exec(function(err, users) {
+        if (err) return next(err);
+        res.send(users);
+    });
+};
