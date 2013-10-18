@@ -1,7 +1,7 @@
 script(type='text/javascript', src='/lib/jquery/jquery.js')
 
 //Bootstrap
-script(type='text/javascript', src='/lib/bootstrap-assets/js/bootstrap.js')
+script(type='text/javascript', src='/lib/bootstrap/dist/js/bootstrap.js')
 
 //AngularJS
 script(type='text/javascript', src='/lib/angular/angular.js')
@@ -11,6 +11,7 @@ script(type='text/javascript', src='/lib/angular-resource/angular-resource.js')
 //Angular UI
 script(type='text/javascript', src='/lib/angular-bootstrap/ui-bootstrap-tpls.js')
 script(type='text/javascript', src='/lib/angular-ui-utils/modules/route/route.js')
+script(type='text/javascript', src='/lib/ng-grid/ng-grid-2.0.7.min.js')
 
 //Application Init
 script(type='text/javascript', src='/js/app.js')
@@ -21,12 +22,17 @@ script(type='text/javascript', src='/js/filters.js')
 //Application Services
 script(type='text/javascript', src='/js/services/global.js')
 script(type='text/javascript', src='/js/services/articles.js')
+script(type='text/javascript', src='/js/services/person.js')
 
 //Application Controllers
 script(type='text/javascript', src='/js/controllers/articles.js')
+script(type='text/javascript', src='/js/controllers/tutors.js')
 script(type='text/javascript', src='/js/controllers/index.js')
-script(type='text/javascript', src='/js/controllers/header.js')	
+script(type='text/javascript', src='/js/controllers/header.js')
 script(type='text/javascript', src='/js/init.js')
 
-//Livereload script rendered 
-script(type='text/javascript', src='http://localhost:35729/livereload.js')	
+//Livereload script rendered
+script(type='text/javascript', src='http://localhost:35729/livereload.js')
+
+//Locale
+script(type='text/javascript', src='/lib/angular-i18n/angular-locale_de-de.js')
