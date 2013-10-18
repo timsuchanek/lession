@@ -23,3 +23,19 @@ footer {
 footer p {
     padding:5px 0 12px 10px
 }
+
+.tutorsGrid {
+    border: 1px solid rgba(212,212,212);
+    width: 800px;
+    height: 800px;
+}
+
+.tutorsGrid ul li {
+    display: inline;
+    list-style-type: none;
+}
+
+.tutorsGrid .ngRow img {
+    height: 50px;
+    margin: 5px auto;
+}
